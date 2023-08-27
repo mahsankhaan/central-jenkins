@@ -17,8 +17,8 @@ pipeline {
               //def branch = GIT_BRANCH
                 checkout([
                     $class: 'GitSCM', 
-                    //branches: [[name: '*/sandbox']], 
-                    branches: [[name: GIT_BRANCH]], 
+                    branches: [[name: '*/sandbox']], 
+                  //  branches: [[name: GIT_BRANCH]], 
                     userRemoteConfigs: [[url: 'https://github.com/mahsankhaan/build-scalable-application-using-ibmcloud-docker.git']]
                 ])
             }
