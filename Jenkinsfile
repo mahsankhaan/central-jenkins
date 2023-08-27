@@ -44,7 +44,7 @@ pipeline {
 
         stage('Build Deploy Code') {
             when {
-                branch 'develop'
+                branch 'jenkins'
             }
             steps {
                 sh """
