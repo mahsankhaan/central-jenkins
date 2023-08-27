@@ -5,7 +5,7 @@ pipeline {
             steps{
                 script{
 
-                def branchname = "testfea"
+                def branchname = "testme"
             
                 build job: 'input', wait: false, parameters: [string(name: 'branchname', value: branchname )]
 
