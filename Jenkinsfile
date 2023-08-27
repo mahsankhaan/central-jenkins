@@ -3,8 +3,17 @@ pipeline {
 
     stages {
 
-        stage('Code Checkout') {
+        stage('Code Checkout') {      
             steps {
+ 
+
+              // get branch name
+              def branch = GIT_BRANCH
+
+
+              println 'Getting current Branchss'        
+              println GIT_BRANCH
+
                 checkout([
                     $class: 'GitSCM', 
                     branches: [[name: '*/sandbox']], 
