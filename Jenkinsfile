@@ -53,5 +53,21 @@ pipeline {
             }
         }
 
+
+            stage('Build Deploy Code for master') {
+            when {
+                branch 'master'
+            }
+            steps {
+                sh """
+                echo "Building Artifact master"
+                """
+
+                sh """
+                echo "Deploying Cod mastee"
+                """
+            }
+        }
+
     }   
 }
