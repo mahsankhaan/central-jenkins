@@ -9,9 +9,10 @@ pipeline {
         stage('Start'){
             steps{
                 echo "You choose: ${params.PARAMETER01}"
-                   
+
+                def branchname = "${params.PARAMETER01}"
             
-                    build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: 'main' )]
+                build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: 'main' )]
             }
         }
     }
