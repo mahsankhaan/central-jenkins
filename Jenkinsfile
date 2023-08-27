@@ -8,9 +8,7 @@ pipeline {
     stages {
         stage('PrintParameter'){
             steps{
-                script{
-                 sh 'echo ${params.HELLO}'
-                }
+                echo "You choose: ${params.HELLO}"
             }
         }
     }
