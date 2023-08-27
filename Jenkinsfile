@@ -8,7 +8,10 @@ pipeline {
     stages {
         stage('Start'){
             steps{
-                    build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: String.valueOf(PARAMETER01))]
+                echo "You choose: ${params.PARAMETER01}"
+
+
+                  //  build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: String.valueOf(PARAMETER01))]
             }
         }
     }
