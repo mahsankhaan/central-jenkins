@@ -12,7 +12,7 @@ pipeline {
               //def branch = GIT_BRANCH
 
 
-              println 'Getting current Branchs'        
+              println 'Getting current Branch'        
               println GIT_BRANCH
               //def branch = GIT_BRANCH
                 checkout([
