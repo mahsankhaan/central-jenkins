@@ -8,7 +8,8 @@ pipeline {
  
 
               // get branch name
-              def branch = GIT_BRANCH
+              
+              //def branch = GIT_BRANCH
 
 
               println 'Getting current Branches'        
