@@ -16,7 +16,7 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM', 
-                    branches: [[name: '*/see']], 
+                    branches: [[name: '*/main']], 
                     userRemoteConfigs: [[url: 'https://github.com/mahsankhaan/build-scalable-application-using-ibmcloud-docker.git']]
                 ])
             }
@@ -38,36 +38,7 @@ pipeline {
             }
         }
 
-        stage('Build Deploy Code') {
-            when {
-                branch 'jenkins'
-            }
-            steps {
-                sh """
-                echo "Building Artifact"
-                """
-
-                sh """
-                echo "Deploying Code"
-                """
-            }
-        }
-
-
-            stage('Build Deploy Code for master') {
-            when {
-                branch 'master'
-            }
-            steps {
-                sh """
-                echo "Building Artifact master"
-                """
-
-                sh """
-                echo "Deploying Cod mastee"
-                """
-            }
-        }
+ 
 
     }   
 }
