@@ -11,7 +11,7 @@ pipeline {
                 echo "You choose: ${params.PARAMETER01}"
                    
             
-                    build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: 'branchvalue' )]
+                    build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: 'main' )]
             }
         }
     }
