@@ -10,14 +10,7 @@ pipeline {
             steps{
                 echo "You choose: ${params.PARAMETER01}"
                    
-                
-
-
-                script
-                {
-                    def branchvalue = ${params.PARAMETER01}
-                }
-
+            
                     build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: 'branchvalue' )]
             }
         }
