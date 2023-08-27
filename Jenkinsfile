@@ -13,7 +13,7 @@ pipeline {
 
                 def branchname = "${params.PARAMETER01}"
             
-                build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: 'sandbox' )]
+                build job: 'input', wait: false, parameters: [string(name: 'branchname', value: 'sandbox' )]
 
                 }
             }
