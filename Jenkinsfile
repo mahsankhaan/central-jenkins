@@ -14,11 +14,11 @@ pipeline {
 
               println 'Getting current Branches'        
               println GIT_BRANCH
-              def branch = GIT_BRANCH
+              //def branch = GIT_BRANCH
                 checkout([
                     $class: 'GitSCM', 
                     //branches: [[name: '*/sandbox']], 
-                    branches: [[name: branch]], 
+                    branches: [[name: GIT_BRANCH]], 
                     userRemoteConfigs: [[url: 'https://github.com/mahsankhaan/build-scalable-application-using-ibmcloud-docker.git']]
                 ])
             }
