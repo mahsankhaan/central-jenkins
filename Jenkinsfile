@@ -11,7 +11,9 @@ pipeline {
                 script{
                 echo "You choose: ${params.PARAMETER01}"
 
-                def branchname = "${params.PARAMETER01}"
+                //def branchname = "${params.PARAMETER01}"
+                def branchname = sandbox
+
             
                 build job: 'input', wait: false, parameters: [string(name: 'branchname', value: branchname )]
 
