@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     parameters {
-        string(defaultValue: "", description: 'K', name: 'HELLO')
+        string(defaultValue: "", description: 'get branch name', name: 'branchname')
     }
 
     stages {
         stage('PrintParameter'){
             steps{
-                echo "You choose: ${params.HELLO}"
+                echo "You choose: ${params.branchname}"
             }
         }
     }
