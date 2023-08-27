@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Start'){
             steps{
-                    build job: 'ANOTHER_JOB_NAME', wait: false, parameters: [string(name: 'HELLO', value: String.valueOf(PARAMETER01))]
+                    build job: 'input', wait: false, parameters: [string(name: 'HELLO', value: String.valueOf(PARAMETER01))]
             }
         }
     }
