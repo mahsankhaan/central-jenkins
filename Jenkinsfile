@@ -7,6 +7,8 @@ pipeline {
                 //def branchname = "testme"
                 // get branch name
                 def branchname = GIT_BRANCH
+                def testvariable = "test"
+
                 build job: 'input', wait: false, parameters: [string(name: 'branchname', value: branchname )]
 
                 }
