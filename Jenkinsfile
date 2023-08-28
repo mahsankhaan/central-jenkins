@@ -7,7 +7,6 @@ pipeline {
             steps{
                 script{
                 def branchname = GIT_BRANCH
-                echo branchname
                 when {
                 branch 'main'
                  }
