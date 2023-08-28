@@ -8,6 +8,9 @@ pipeline {
                 script{
                 //def branchname = "${params.PARAMETER01}"
                 def branchname = GIT_BRANCH
+                def branch = "test"
+
+
                 echo branchname
 
             
